@@ -88,3 +88,13 @@ document.querySelectorAll("nav a").forEach((anchor) => {
 		});
 	});
 });
+
+document.getElementById("structure__nav-ul-guide").addEventListener("click", function () {
+	document.getElementById("structure__content-guide").style.cssText = "display: flex;";
+	document.getElementById("structure__content-departments").style.cssText = "display: none;";
+});
+
+document.getElementById("structure__nav-ul-departments").addEventListener("click", function () {
+	document.getElementById("structure__content-departments").style.cssText = "display: block;";
+	document.getElementById("structure__content-guide").style.cssText = "display: none;";
+});

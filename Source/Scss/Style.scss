@@ -440,22 +440,23 @@ footer {
 
 .structure__nav-ul {
 	li {
-		padding: 12px 10px 20px 0;
+		margin: 12px 10px 42px 0;
 		font-size: 18px;
 		color: #000000;
 		font-weight: 600;
+		cursor: pointer;
 	}
 }
 
 .structure__content {
 	flex: 0 0 75%;
+}
+
+.structure__content-guide {
+	display: flex;
 	padding: 15px;
 	border: 1px solid #cac6c6;
 	border-radius: 5px;
-}
-
-.structure__content-wrapper {
-	display: flex;
 }
 
 .structure__content-block-img {
