@@ -89,6 +89,19 @@ document.querySelectorAll("nav a").forEach((anchor) => {
 	});
 });
 
+// Визуальное отображение активного блока
+var buttons = document.querySelectorAll(".structure__nav-ul-li");
+buttons.forEach(function (button) {
+	button.addEventListener("click", function () {
+		buttons.forEach(function (btn) {
+			btn.classList.remove("structure__nav-ul-li-activated");
+		});
+
+		button.classList.add("structure__nav-ul-li-activated");
+	});
+});
+
+// Смена контента
 document.getElementById("structure__nav-ul-guide").addEventListener("click", function () {
 	document.getElementById("structure__content-guide").style.cssText = "display: flex;";
 	document.getElementById("structure__content-departments").style.cssText = "display: none;";
