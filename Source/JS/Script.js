@@ -1,113 +1,94 @@
-"use stricr";
+"use strict";
 
-// Ждем загрузку контента
-window.onload = function () {
-	const parallax = document.querySelector(".parallax");
+// Выбираем необходимые DOM-элементы
+const parallax = document.querySelector(".parallax");
+const content = document.querySelector(".parallax__content");
+const background = document.querySelector(".images-parallax__background");
 
-	if (parallax) {
-		const content = document.querySelector(".parallax__content");
-		const background = document.querySelector(".images-parallax__background");
+// Коэффициенты для параллакса
+const forBackground = 40;
+const speed = 0.05;
 
-		// Коэффициенты
-		const forBackground = 40;
+// Переменные для отслеживания координат мыши
+let positionX = 0,
+	positionY = 0;
+let coordXprocent = 0,
+	coordYprocent = 0;
 
-		// Скорость анимации
-		const speed = 0.05;
+// Функция для установки стилей параллакса при движении мыши
+function setMouseParallaxStyle() {
+	const distX = coordXprocent - positionX;
+	const distY = coordYprocent - positionY;
 
-		// Обьвление переменных
-		let positionX = 0,
-			positionY = 0;
-		let coordXprocent = 0,
-			coordYprocent = 0;
+	positionX = positionX + distX * speed;
+	positionY = positionY + distY * speed;
 
-		function setMouseParallaxStyle() {
-			const distX = coordXprocent - positionX;
-			const distY = coordYprocent - positionY;
+	// Применяем стили к заднему фону
+	background.style.cssText = `transform: translate(${positionX / forBackground}%,${
+		positionY / forBackground
+	}%);`;
 
-			positionX = positionX + distX * speed;
-			positionY = positionY + distY * speed;
+	// Запускаем анимацию следующего кадра
+	requestAnimationFrame(setMouseParallaxStyle);
+}
 
-			// Передаем стили
-			background.style.cssText = `transform: translate(${positionX / forBackground}%,${
-				positionY / forBackground
-			}%);`;
+// Инициализация параллакса
+setMouseParallaxStyle();
 
-			requestAnimationFrame(setMouseParallaxStyle);
-		}
-		setMouseParallaxStyle();
+// Обработчик движения мыши для определения координат
+parallax.addEventListener("mousemove", function (e) {
+	const parallaxWidth = parallax.offsetWidth;
+	const parallaxHeight = parallax.offsetHeight;
 
-		parallax.addEventListener("mousemove", function (e) {
-			// Получение ширины и высоты блока
-			const parallaxWidth = parallax.offsetWidth;
-			const parallaxHeight = parallax.offsetHeight;
+	const coordX = e.pageX - parallaxWidth / 2;
+	const coordY = e.pageY - parallaxHeight / 2;
 
-			// Ноль по середине
-			const coordX = e.pageX - parallaxWidth / 2;
-			const coordY = e.pageY - parallaxHeight / 2;
-
-			// Получаем проценты
-			coordXprocent = (coordX / parallaxWidth) * 100;
-			coordYprocent = (coordY / parallaxHeight) * 100;
-		});
-
-		// Parallfx при скролле
-
-		let thresholdSets = [];
-		for (let i = 0; i <= 1.0; i += 0.005) {
-			thresholdSets.push(i);
-		}
-		const callback = function (entries, observer) {
-			const scrollTopProcent = (window.pageYOffset / parallax.offsetHeight) * 100;
-			setParallaxItemsStyle(scrollTopProcent);
-		};
-		const observer = new IntersectionObserver(callback, {
-			threshold: thresholdSets,
-		});
-
-		observer.observe(document.querySelector(".content"));
-
-		function setParallaxItemsStyle(scrollTopProcent) {
-			content.style.cssText = `transform: translate(0%,-${scrollTopProcent / 1}%);`;
-		}
-	}
-};
-
-// Прокрутка страницы
-document.querySelectorAll("nav a").forEach((anchor) => {
-	anchor.addEventListener("click", function (e) {
-		e.preventDefault();
-
-		const targetId = this.getAttribute("href").substring(1);
-		const targetSection = document.getElementById(targetId);
-
-		const targetOffset = targetSection.getBoundingClientRect().top + window.scrollY;
-
-		window.scrollTo({
-			top: targetOffset - document.querySelector("nav").offsetHeight,
-			behavior: "smooth",
-		});
-	});
+	// Получаем процентные координаты
+	coordXprocent = (coordX / parallaxWidth) * 100;
+	coordYprocent = (coordY / parallaxHeight) * 100;
 });
 
-// Визуальное отображение активного блока
-var buttons = document.querySelectorAll(".structure__nav-ul-li");
-buttons.forEach(function (button) {
-	button.addEventListener("click", function () {
-		buttons.forEach(function (btn) {
-			btn.classList.remove("structure__nav-ul-li-activated");
-		});
+// Инициализация IntersectionObserver для параллакса при скролле
+const contentElement = document.querySelector(".content");
 
+if (contentElement) {
+	const observer = new IntersectionObserver(callback, {
+		threshold: 0.8,
+	});
+
+	observer.observe(contentElement);
+}
+
+// Функция обратного вызова для IntersectionObserver
+function callback(entries, observer) {
+	const scrollTopProcent = (window.pageYOffset / parallax.offsetHeight) * 100;
+	setParallaxItemsStyle(scrollTopProcent);
+}
+
+// Функция для установки стилей при скролле
+function setParallaxItemsStyle(scrollTopProcent) {
+	content.style.cssText = `transform: translate(0%,-${scrollTopProcent / 1}%);`;
+}
+
+// Визуальное отображение активного блока навигации
+const buttons = document.querySelectorAll(".structure__nav-ul-li");
+
+buttons.forEach((button) => {
+	button.addEventListener("click", () => {
+		// Снимаем выделение с других кнопок
+		buttons.forEach((btn) => btn.classList.remove("structure__nav-ul-li-activated"));
+		// Выделяем текущую кнопку
 		button.classList.add("structure__nav-ul-li-activated");
 	});
 });
 
-// Смена контента
+// Обработчики смены контента при клике на соответствующие ссылки
 document.getElementById("structure__nav-ul-guide").addEventListener("click", function () {
-	document.getElementById("structure__content-guide").style.cssText = "display: flex;";
-	document.getElementById("structure__content-departments").style.cssText = "display: none;";
+	document.getElementById("structure__content-guide").style.display = "flex";
+	document.getElementById("structure__content-departments").style.display = "none";
 });
 
 document.getElementById("structure__nav-ul-departments").addEventListener("click", function () {
-	document.getElementById("structure__content-departments").style.cssText = "display: block;";
-	document.getElementById("structure__content-guide").style.cssText = "display: none;";
+	document.getElementById("structure__content-departments").style.display = "block";
+	document.getElementById("structure__content-guide").style.display = "none";
 });
