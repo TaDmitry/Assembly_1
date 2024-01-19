@@ -295,6 +295,11 @@ footer {
 		font-size: 14px;
 		color: #666666;
 		font-weight: 600;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 15;
+		-webkit-box-orient: vertical;
 	}
 }
 

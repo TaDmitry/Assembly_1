@@ -2,8 +2,8 @@
 
 // Выбираем необходимые DOM-элементы
 const parallax = document.querySelector(".parallax");
-const content = document.querySelector(".parallax__content");
 const background = document.querySelector(".images-parallax__background");
+const buttons = document.querySelectorAll(".structure__nav-ul-li");
 
 // Коэффициенты для параллакса
 const forBackground = 40;
@@ -32,7 +32,7 @@ function setMouseParallaxStyle() {
 	requestAnimationFrame(setMouseParallaxStyle);
 }
 
-// Инициализация параллакса
+// Инициализация параллакса при движении мыши
 setMouseParallaxStyle();
 
 // Обработчик движения мыши для определения координат
@@ -48,31 +48,7 @@ parallax.addEventListener("mousemove", function (e) {
 	coordYprocent = (coordY / parallaxHeight) * 100;
 });
 
-// Инициализация IntersectionObserver для параллакса при скролле
-const contentElement = document.querySelector(".content");
-
-if (contentElement) {
-	const observer = new IntersectionObserver(callback, {
-		threshold: 0.8,
-	});
-
-	observer.observe(contentElement);
-}
-
-// Функция обратного вызова для IntersectionObserver
-function callback(entries, observer) {
-	const scrollTopProcent = (window.pageYOffset / parallax.offsetHeight) * 100;
-	setParallaxItemsStyle(scrollTopProcent);
-}
-
-// Функция для установки стилей при скролле
-function setParallaxItemsStyle(scrollTopProcent) {
-	content.style.cssText = `transform: translate(0%,-${scrollTopProcent / 1}%);`;
-}
-
 // Визуальное отображение активного блока навигации
-const buttons = document.querySelectorAll(".structure__nav-ul-li");
-
 buttons.forEach((button) => {
 	button.addEventListener("click", () => {
 		// Снимаем выделение с других кнопок
