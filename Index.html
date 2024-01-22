@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<link rel="stylesheet" href="./Css/Style.css" />
-		<script src="https://kit.fontawesome.com/c5747cb861.js" crossorigin="anonymous"></script>
 		<!--! favicon -->
 		<link rel="apple-touch-icon" sizes="57x57" href="./Source/Img/Favicon//favicon-57x57.png" />
 		<link rel="apple-touch-icon" sizes="60x60" href="./Source/Img/Favicon//favicon-60x60.png" />
@@ -39,9 +38,9 @@
 					<div class="parallax__body">
 						<div class="parallax__content main-wrapper">
 							<h3>
-								Ақпараттандыруды <br />
-								Дамыту <br />
-								Орталығы
+								Центр <br />
+								Развития <br />
+								Информатизации
 							</h3>
 						</div>
 						<div class="parallax__images images-parallax">
@@ -62,18 +61,19 @@
 				</div>
 				<section class="main-menu">
 					<ul>
-						<li><a href="#news_link">Жаңалықтар</a></li>
-						<li><a href="#about-us_link">Біз туралы</a></li>
-						<li><a href="#structure_link">Құрылымы</a></li>
-						<li><a href="#">Бос жұмыс орындары</a></li>
-						<li><a href="#">Байланыс</a></li>
+						<li><a href="#news_link">Новости</a></li>
+						<li><a href="#about-us_link">О нас</a></li>
+						<li><a href="#structure_link">Структура</a></li>
+						<li><a href="#">Вакансии</a></li>
+						<li><a href="#">Контакты</a></li>
 					</ul>
-					<div>
-						<ul>
-							<li>KK</li>
-							<li>RU</li>
-							<li>EN</li>
-						</ul>
+					<div class="main-menu__active" id="mainMenu">
+						<span id="selectedLanguage">RU</span>
+						<div class="main-menu__languages" id="languages">
+							<a href="#" class="dropdown-item" id="ruLanguage">RU</a>
+							<a href="#" class="dropdown-item" id="enLanguage">EN</a>
+							<a href="#" class="dropdown-item" id="kkLanguage">KK</a>
+						</div>
 					</div>
 				</section>
 			</div>
@@ -82,7 +82,7 @@
 		<main>
 			<section class="wrapper__news content" id="news_link">
 				<div class="main__content-news main-wrapper">
-					<h2><span>Соңғы жаңалықтар</span></h2>
+					<h2><span>Последние новости</span></h2>
 					<ul class="news__block-item">
 						<li class="news__item">
 							<article class="card">
@@ -170,16 +170,16 @@
 							</article>
 						</li>
 					</ul>
-					<button class="more__news"><a href="News.html">Көбірек жаңалықтар</a></button>
+					<button class="more__news"><a href="News.html">Больше новостей</a></button>
 				</div>
 			</section>
 
 			<section class="wrapper__about-us" id="about-us_link">
 				<div class="main-wrapper">
-					<h2><span>Біз туралы</span></h2>
+					<h2><span>О-нас</span></h2>
 					<div>
 						<div class="works__container">
-							<h3>ЦРИ бойынша қысқаша ақпарат.</h3>
+							<h3>ЦРИ-краткая информация о нас.</h3>
 							<p>
 								It is a long established fact that a reader will be distracted by the readable content of a
 								page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
@@ -202,14 +202,14 @@
 
 			<section class="structure" id="structure_link">
 				<div class="structure__wrapper main-wrapper">
-					<h2><span>Құрылымы</span></h2>
+					<h2><span>Структура</span></h2>
 					<div class="structure__wrapper-flex">
 						<div class="structure__nav">
 							<ul class="structure__nav-ul">
 								<li class="structure__nav-ul-li structure__nav-ul-li-activated" id="structure__nav-ul-guide">
-									Басшылық
+									Руководство
 								</li>
-								<li class="structure__nav-ul-li" id="structure__nav-ul-departments">Бөлімдер</li>
+								<li class="structure__nav-ul-li" id="structure__nav-ul-departments">Отделы</li>
 							</ul>
 						</div>
 
@@ -222,9 +222,8 @@
 									<div>
 										<h3>Владимир Владимирович Владимир</h3>
 										<p>
-											Қайғы-қасіреттің не екенін біліңіз, отырыңыз және элитаның өсіп келе жатқанын көріңіз.
-											Aliquem repudiandae consequuntur accusantium Nostrum қамқоршылық қоры минус құқықтар,
-											қиа вениам аниме!
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic aspernatur beatae odio ex
+											quisquam cum reprehenderit nobis ea totam nam.
 										</p>
 									</div>
 									<div class="structure__content-block-text">
@@ -243,12 +242,12 @@
 							<div class="structure__content-departments" id="structure__content-departments">
 								<div>
 									<div>
-										<h4>№ 1 бөлім</h4>
-										<a href="">Толығырақ<i class="fa-solid fa-arrow-right"></i></a>
+										<h4>Часть № 1</h4>
+										<a href="">Подробнее<i class="fa-solid fa-arrow-right"></i></a>
 									</div>
 									<div>
 										<div>
-											<p>Бөлім басшысы:</p>
+											<p>Руководитель отдела:</p>
 											<p>Иван иванович иванов</p>
 										</div>
 										<div>
@@ -260,12 +259,12 @@
 
 								<div>
 									<div>
-										<h4>№ 2 бөлім</h4>
-										<a href="">Толығырақ<i class="fa-solid fa-arrow-right"></i></a>
+										<h4>Часть № 2</h4>
+										<a href="">Подробнее<i class="fa-solid fa-arrow-right"></i></a>
 									</div>
 									<div>
 										<div>
-											<p>Бөлім басшысы:</p>
+											<p>Руководитель отдела:</p>
 											<p>Иван иванович иванов</p>
 										</div>
 										<div>
@@ -277,12 +276,12 @@
 
 								<div>
 									<div>
-										<h4>№ 3 бөлім</h4>
-										<a href="">Толығырақ<i class="fa-solid fa-arrow-right"></i></a>
+										<h4>Часть № 3</h4>
+										<a href="">Подробнее<i class="fa-solid fa-arrow-right"></i></a>
 									</div>
 									<div>
 										<div>
-											<p>Бөлім басшысы:</p>
+											<p>Руководитель отдела:</p>
 											<p>Иван иванович иванов</p>
 										</div>
 										<div>
@@ -302,4 +301,6 @@
 	</body>
 
 	<script src="./JS/Main-dist.js"></script>
+	<!-- Иконки -->
+	<script src="https://kit.fontawesome.com/0032cb8147.js" crossorigin="anonymous"></script>
 </html>
