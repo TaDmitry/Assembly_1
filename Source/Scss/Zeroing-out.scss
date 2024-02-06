@@ -27,6 +27,14 @@
 	}
 }
 
+::selection {
+	background-color: #00e10422;
+}
+
+::-moz-selection {
+	background-color: #00e10422;
+}
+
 @font-face {
 	font-family: "Didact Gothic";
 	font-weight: 400;

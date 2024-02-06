@@ -1,6 +1,6 @@
-@import "Zeroing-out.scss";
-
 @import "Variables.scss";
+
+@import "Zeroing-out.scss";
 
 h1,
 h2,
@@ -53,7 +53,7 @@ h3 {
 .wrapper__about-us,
 .structure,
 footer {
-	padding: 60px 0;
+	padding: 100px 0;
 }
 
 .wrapper__parallax {
@@ -104,6 +104,11 @@ footer {
 			border-radius: 10px;
 		}
 	}
+}
+
+h4 {
+	font-size: 20px;
+	font-weight: 600;
 }
 
 .parallax__content {
@@ -300,7 +305,7 @@ footer {
 }
 
 .main__content-news {
-	padding: 30px 0;
+	padding: 50px 0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -361,7 +366,7 @@ footer {
 
 	p {
 		font-size: 14px;
-		color: #666666;
+		color: #3f3f3f;
 		font-weight: 600;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -430,20 +435,8 @@ footer {
 }
 
 .wrapper__about-us {
-	background: url(../Source/Img/banner-bg.jpg) no-repeat;
-	background-size: cover;
-	position: relative;
-}
-
-.wrapper__about-us::after {
-	content: "";
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	background-color: rgba(33, 42, 73, 0.6);
-	z-index: 1;
+	background-color: #FDFEFD;
+	position: sticky;
 }
 
 .wrapper__about-us>.main-wrapper {
@@ -458,14 +451,6 @@ footer {
 	justify-content: space-between;
 }
 
-.wrapper__about-us h2 {
-	color: $background-color;
-
-	&>span::after {
-		background: $background-color;
-	}
-}
-
 .works__container {
 	flex: 0 0 60%;
 	margin-top: 30px;
@@ -473,10 +458,21 @@ footer {
 	font-weight: 400;
 	font-family: "Open Sans", sans-serif;
 	line-height: 24px;
-	color: $background-color;
+	color: #3f3f3f;
 
 	&>h3 {
 		margin-bottom: 30px;
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 105px;
+			left: 10px;
+			bottom: 0;
+			width: 30%;
+			height: 1px;
+			background: rgb(68, 68, 68);
+		}
 	}
 
 	&>ul {
@@ -572,8 +568,35 @@ footer {
 	margin-bottom: 10px;
 
 	span {
-		margin: 0 0 10px;
+		margin: 0 0 6px;
+		font-weight: 600;
 	}
 }
+
+.structure__content-departments {
+	display: none;
+}
+
+.structure__department {
+	padding: 15px;
+	border: 1px solid #cac6c6;
+	border-radius: 5px;
+}
+
+.structure__department-info {
+	a {
+		display: flex;
+	}
+}
+
+.structure__department-title {
+	margin-bottom: 5px;
+}
+
+.structure__department-details {}
+
+.structure__manager-info {}
+
+.structure__contact-info {}
 
 @import "Media.scss";

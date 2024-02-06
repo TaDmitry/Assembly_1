@@ -1,5 +1,7 @@
-//@prepros-append Script.js
+//@prepros-append Parallax.js
 
 //@prepros-append Scroll.js
 
-//@prepros-append LanguageChange.js
+//@prepros-append LanguageСhange.js
+
+//@prepros-append ScriptsStructures.js
