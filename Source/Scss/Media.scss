@@ -64,6 +64,12 @@
 	}
 }
 
+@media (max-width: 768px) {
+	.telephone {
+		color: $MainSource-900;
+	}
+}
+
 @media (max-width: 720px) {
 	header {
 		height: auto;

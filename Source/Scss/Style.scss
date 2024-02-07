@@ -551,14 +551,28 @@ h4 {
 		margin: 0 0 6px;
 		font-weight: 600;
 	}
-
-	a {
-		color: #000000;
-	}
 }
 
 .structure__content-email {
-	color: #000000;
+	color: $MainSource-600;
+	position: relative;
+	width: max-content;
+
+	&::before {
+		content: "";
+		width: 0;
+		height: 2px;
+		background: $MainSource-900;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		transition: width 0.3s ease;
+	}
+
+	&:hover::before {
+		width: 100%;
+	}
 }
 
 .structure__content-departments {
