@@ -9,7 +9,7 @@
 	font-family: "Didact Gothic";
 
 	&::-webkit-scrollbar {
-		width: 12px;
+		width: 1vw;
 	}
 
 	&::-webkit-scrollbar-track {
@@ -18,8 +18,8 @@
 
 	&::-webkit-scrollbar-thumb {
 		background-color: #d8d6d6;
-		border-radius: 10px;
-		border: 3px solid #ffffff;
+		border-radius: 1vw;
+		border: 0.2vw solid #ffffff;
 	}
 
 	&::-webkit-scrollbar-thumb:hover {

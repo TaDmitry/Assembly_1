@@ -9,20 +9,22 @@ document.getElementById("structure__nav-ul-departments").addEventListener("click
 	document.getElementById("structure__content-guide").style.display = "none";
 });
 
+// Изменения активности номера на мобильных устройствах
 window.onload = function () {
-	function replacePhoneLink() {
-		// Получаем ссылку и размер экрана
-		var phoneLink = document.querySelector("#phoneLink");
+	function replacePhoneLinks() {
+		var phoneLinks = document.getElementsByClassName("telephone");
 		var screenWidth = window.innerWidth;
 
-		if (screenWidth <= 768) {
-			phoneLink.href = "tel:+77777777777";
-		} else {
-			phoneLink.href = "";
+		for (var i = 0; i < phoneLinks.length; i++) {
+			if (screenWidth <= 768) {
+				phoneLinks[i].href = "tel:+77777777777";
+			} else {
+				phoneLinks[i].removeAttribute("href");
+			}
 		}
 	}
 
 	// Вызываем функцию при загрузке страницы и изменении размера экрана
-	replacePhoneLink();
-	window.addEventListener("resize", replacePhoneLink);
+	replacePhoneLinks();
+	window.addEventListener("resize", replacePhoneLinks);
 };
