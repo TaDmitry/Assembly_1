@@ -522,6 +522,7 @@ h4 {
 }
 
 .structure__content-block-img {
+	display: flex;
 	padding: 0 10px 0 0;
 	border-right: 1px solid #cac6c6;
 
@@ -549,6 +550,10 @@ h4 {
 	span {
 		margin: 0 0 6px;
 		font-weight: 600;
+	}
+
+	a {
+		color: #000000;
 	}
 }
 
@@ -607,6 +612,10 @@ h4 {
 	span {
 		font-weight: 600;
 	}
+}
+
+.telephone {
+	color: #000000
 }
 
 @import "Media.scss";
