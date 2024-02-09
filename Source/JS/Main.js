@@ -4,6 +4,6 @@
 
 //@prepros-append NewsScripts.js
 
-//@prepros-append LanguageСhange.js
+//@prepros-append LanguageСhangeScripts.js
 
-//@prepros-append ScriptsStructures.js
+//@prepros-append Structure/StructuresScripts.js

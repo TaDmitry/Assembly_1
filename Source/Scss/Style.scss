@@ -169,6 +169,10 @@ h4 {
 		align-items: center;
 		margin: 5px 0;
 
+		a {
+			max-width: 50px;
+		}
+
 		span {
 			font-size: 24px;
 			font-weight: 600;
@@ -188,7 +192,7 @@ h4 {
 }
 
 .logo {
-	max-width: 55px;
+	width: 100%;
 }
 
 .main-menu {
@@ -225,37 +229,34 @@ h4 {
 			transition-duration: 0.3s;
 		}
 
-		&:hover::before {
-			opacity: 1;
-			width: 100%;
+
+
+		&:last-child {
+			margin-right: 15px;
 		}
 	}
 }
 
 .main-menu__active {
 	position: relative;
-	display: inline-block;
 	cursor: pointer;
-	border: 3px solid $MainSource-900;
-	width: 36px;
-	height: 36px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border-radius: 100%;
+
 
 	span {
-		color: $background-color;
+		color: $MainSource-900;
 		font-size: 16px;
 		font-weight: 600;
 		font-family: "TT Lakes Neue Condensed";
+		border-left: 2px solid $background-color;
+		padding-left: 10px;
 	}
 }
 
 .main-menu__active .main-menu__languages {
 	display: none;
 	position: absolute;
-	top: -4px;
+	top: -11px;
+	left: 0;
 	background-color: $accent-color;
 	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 	z-index: 1;
@@ -368,10 +369,6 @@ h4 {
 		transition: 0.4s;
 		cursor: pointer;
 		border-radius: 3px;
-
-		&:hover {
-			background-color: $MainSource-600;
-		}
 	}
 
 	span {
@@ -501,10 +498,6 @@ h4 {
 		transition: background 0.3s;
 		cursor: pointer;
 
-		&:hover {
-			background: #c1ddc250
-		}
-
 		&.structure__nav-ul-li-activated {
 			color: #2E7C32;
 		}
@@ -570,10 +563,6 @@ h4 {
 		transform: translateX(-50%);
 		transition: width 0.3s ease;
 	}
-
-	&:hover::before {
-		width: 100%;
-	}
 }
 
 .structure__content-departments {
@@ -632,5 +621,7 @@ h4 {
 .telephone {
 	color: #000000
 }
+
+@import "MediaStyle.scss";
 
 @import "Media.scss";

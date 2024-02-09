@@ -1,0 +1,19 @@
+@media screen and (min-width: 800px) {
+	.main-menu>ul>li:hover::before {
+		opacity: 1;
+		width: 100%;
+	}
+
+	.card__information button:hover {
+		background-color: $MainSource-600;
+	}
+
+
+	.structure__nav-ul li:hover {
+		background: #c1ddc250
+	}
+
+	.structure__content-email:hover::before {
+		width: 100%;
+	}
+}
