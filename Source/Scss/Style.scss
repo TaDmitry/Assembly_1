@@ -50,11 +50,18 @@ h3 {
 	font-weight: 600;
 }
 
+h4 {
+	font-size: 20px;
+	font-weight: 600;
+}
+
 .wrapper__about-us,
 .structure,
 footer {
 	padding: 60px 0;
 }
+
+//-----------------------------------------//
 
 .wrapper__parallax {
 	min-height: 100%;
@@ -70,29 +77,24 @@ footer {
 	height: 100%;
 	top: 0;
 	left: 0;
-
-	h3 {
-		width: 100%;
-		display: flex;
-		font-size: clamp(20px, 9vw, 120px);
-		color: $background-color;
-		letter-spacing: 0px;
-		margin: 5% 0 30px 0;
-		align-items: center;
-		line-height: 1.2;
-		text-shadow: 2px 2px 24px rgb(0 0 0);
-	}
-}
-
-h4 {
-	font-size: 20px;
-	font-weight: 600;
 }
 
 .parallax__content {
 	text-transform: uppercase;
 	position: relative;
 	z-index: 2;
+}
+
+.parallax__title {
+	width: 100%;
+	display: flex;
+	font-size: clamp(20px, 9vw, 120px);
+	color: $background-color;
+	letter-spacing: 0px;
+	margin: 5% 0 30px 0;
+	align-items: center;
+	line-height: 1.2;
+	text-shadow: 2px 2px 24px rgb(0 0 0);
 }
 
 .parallax__content.main-wrapper {
@@ -134,10 +136,7 @@ h4 {
 	}
 }
 
-.parallax__button {
-	width: 60px;
-	height: 60px;
-}
+//-----------------------------------------//
 
 .navigation-area {
 	width: 100%;
@@ -159,31 +158,11 @@ h4 {
 	}
 }
 
-.nav-wrapper {
+.navigation-area__wrapper {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-
-	&>div {
-		display: flex;
-		align-items: center;
-		margin: 5px 0;
-
-		a {
-			max-width: 50px;
-		}
-
-		span {
-			font-size: 24px;
-			font-weight: 600;
-			letter-spacing: 1px;
-			color: $background-color;
-			margin: 0px 15px 0 10px;
-			font-family: "TT Lakes Neue Condensed";
-		}
-	}
 }
-
 
 .main-wrapper {
 	margin: 0 auto;
@@ -191,56 +170,144 @@ h4 {
 	max-width: 1170px;
 }
 
+.navigation-area__logo {
+	display: flex;
+	align-items: center;
+	margin: 5px 0;
+}
+
 .logo {
-	width: 100%;
+	width: 50px;
+
+	img {
+		width: 100%;
+	}
+}
+
+.navigation-area__brand {
+	font-size: 24px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	color: $background-color;
+	margin: 0px 15px 0 10px;
+	font-family: "TT Lakes Neue Condensed";
+}
+
+.navigation-area__menu {
+	display: flex;
+	align-items: center;
 }
 
 .main-menu {
 	margin-left: auto;
 	display: flex;
 	align-items: center;
+}
 
-	&>ul>li {
-		display: inline-block;
-		letter-spacing: 1px;
-		color: $background-color;
-		margin-right: 20px;
-		cursor: pointer;
-		position: relative;
+.main-menu__burgers {
+	display: none;
+	cursor: pointer;
+	height: 27px;
+	width: 27px;
+	margin: 0 15px 0 0;
+	overflow: visible;
+	position: relative;
+	z-index: 2;
 
-		&>a {
-			color: inherit;
-			font-size: 16px;
-			font-weight: 600;
-			font-family: "TT Lakes Neue Condensed";
-		}
+	span {
+		background: #fff;
+		display: block;
+		height: 3px;
+		opacity: 1;
+		position: absolute;
+		transition: 0.3s ease-in-out;
+		right: 0px;
+		top: 13px;
+		width: 27px;
 
-		&::before {
+		&:before {
 			content: "";
-			width: 10%;
+			background: #fff;
+			display: block;
 			height: 3px;
-			background: $MainSource-900;
+			opacity: 1;
 			position: absolute;
-			left: 0;
-			right: 0;
-			margin: 0 auto;
-			top: 25px;
-			opacity: 0;
-			transition-duration: 0.3s;
+			transition: 0.3s ease-in-out;
+			left: 11px;
+			top: -10px;
+			width: 16px;
 		}
 
-
-
-		&:last-child {
-			margin-right: 15px;
+		&:after {
+			content: "";
+			background: #fff;
+			display: block;
+			height: 3px;
+			opacity: 1;
+			position: absolute;
+			transition: 0.3s ease-in-out;
+			left: 7px;
+			top: 10px;
+			width: 20px;
 		}
+	}
+}
+
+.main-menu__burgers.close span {
+	transform: rotate(-45deg);
+	top: 13px;
+	width: 27px;
+
+	&:before {
+		left: 0px;
+		top: 0px;
+		transform: rotate(90deg);
+		width: 27px;
+	}
+
+	&:after {
+		opacity: 0;
+		width: 0;
+	}
+}
+
+.main-menu__item {
+	display: inline-block;
+	letter-spacing: 1px;
+	color: $background-color;
+	margin-right: 20px;
+	cursor: pointer;
+	position: relative;
+
+	&>a {
+		color: inherit;
+		font-size: 16px;
+		font-weight: 600;
+		font-family: "TT Lakes Neue Condensed";
+	}
+
+	&::before {
+		content: "";
+		width: 10%;
+		height: 3px;
+		background: $MainSource-900;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		top: 25px;
+		opacity: 0;
+		transition-duration: 0.3s;
+	}
+
+	&:last-child {
+		margin-right: 15px;
 	}
 }
 
 .main-menu__active {
 	position: relative;
 	cursor: pointer;
-
 
 	span {
 		color: $MainSource-900;
@@ -278,6 +345,8 @@ h4 {
 		}
 	}
 }
+
+//-----------------------------------------//
 
 .wrapper__news {
 	background-color: $background-color;

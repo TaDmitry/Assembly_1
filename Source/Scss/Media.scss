@@ -63,6 +63,10 @@
 }
 
 @media (max-width: 768px) {
+	.main-menu__burgers {
+		display: block;
+	}
+
 	.telephone {
 		color: $MainSource-900;
 	}
@@ -80,10 +84,6 @@
 
 	.main-menu {
 		margin: 10px 0;
-	}
-
-	.logo {
-		margin: 5px 0;
 	}
 }
 

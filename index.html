@@ -28,12 +28,12 @@
 	</head>
 
 	<body>
-		<header>
-			<section class="wrapper__parallax">
-				<div class="parallax">
+		<header class="header">
+			<section class="header__wrapper wrapper__parallax">
+				<div class="wrapper__parallax-inner parallax">
 					<div class="parallax__body">
 						<div class="parallax__content main-wrapper">
-							<h3 id="parallax__h3">
+							<h3 class="parallax__title" id="parallax__h3">
 								Центр <br />
 								Развития <br />
 								Информатизации
@@ -50,19 +50,25 @@
 		</header>
 
 		<nav class="navigation-area">
-			<div class="nav-wrapper main-wrapper">
-				<div>
-					<a href="index.html"><img class="logo" src="./Source/Img/logo.png" /></a>
-					<span>ЦРИ</span>
+			<section class="navigation-area__wrapper main-wrapper">
+				<div class="navigation-area__logo">
+					<a href="index.html" class="logo">
+						<img src="./Source/Img/logo.png" />
+					</a>
+					<span class="navigation-area__brand">ЦРИ</span>
 				</div>
-				<section class="main-menu">
-					<ul>
-						<li><a href="#news_link">Новости</a></li>
-						<li><a href="#about-us_link">О нас</a></li>
-						<li><a href="#structure_link">Структура</a></li>
-						<li><a href="#">Вакансии</a></li>
-						<li><a href="#">Контакты</a></li>
-					</ul>
+				<div class="navigation-area__menu">
+					<div class="main-menu">
+						<div class="main-menu__burgers" id="main-menu__burgers">
+							<span></span>
+						</div>
+						<ul class="main-menu__list" id="main-menu__list">
+							<li class="main-menu__item"><a href="#news_link">Новости</a></li>
+							<li class="main-menu__item"><a href="#about-us_link">О нас</a></li>
+							<li class="main-menu__item"><a href="#structure_link">Структура</a></li>
+							<li class="main-menu__item"><a href="#">Вакансии</a></li>
+						</ul>
+					</div>
 					<div class="main-menu__active" id="mainMenu">
 						<span id="selectedLanguage">RU</span>
 						<div class="main-menu__languages" id="languages">
@@ -71,8 +77,8 @@
 							<a href="#" class="dropdown-item" id="kkLanguage">KK</a>
 						</div>
 					</div>
-				</section>
-			</div>
+				</div>
+			</section>
 		</nav>
 
 		<main>
