@@ -63,6 +63,16 @@
 		display: block;
 	}
 
+	.main-menu__container {
+		width: 0;
+		height: 100vh;
+		position: fixed;
+		top: 0;
+		left: 0;
+		visibility: hidden;
+		opacity: 0;
+	}
+
 	.telephone {
 		color: $MainSource-900;
 	}
@@ -110,18 +120,6 @@
 			font-size: 22px;
 		}
 	}
-
-	.main-menu {
-		margin: 0;
-
-		&>ul {
-			text-align: center;
-
-			&>li {
-				padding-bottom: 22px;
-			}
-		}
-	}
 }
 
 @media (max-width: 425px) {
@@ -143,6 +141,10 @@
 }
 
 @media (max-width: 375px) {
+	.navigation-area__brand {
+		font-size: 20px;
+	}
+
 	.structure__department-details {
 		flex-direction: column;
 		align-items: flex-start;

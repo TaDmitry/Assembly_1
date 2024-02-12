@@ -1,5 +1,5 @@
 @media screen and (min-width: 800px) {
-	.main-menu>ul>li:hover::before {
+	.main-menu__item:hover::before {
 		opacity: 1;
 		width: 100%;
 	}
