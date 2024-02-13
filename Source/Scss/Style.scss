@@ -308,7 +308,9 @@ footer {
 	}
 
 	& .main-menu__button {
-		display: block;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 }
 
@@ -377,18 +379,37 @@ footer {
 	}
 }
 
+.main-menu__controls {
+	display: flex;
+	align-items: baseline;
+	cursor: pointer;
+}
+
 .main-menu__active {
 	position: relative;
 	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: baseline;
 
 	span {
 		color: $MainSource-900;
-		font-size: 16px;
+		font-size: 18px;
 		font-weight: 600;
 		font-family: "TT Lakes Neue Condensed";
 		border-left: 2px solid $background-color;
 		padding-left: 10px;
+		margin-right: 10px;
 	}
+}
+
+.main-menu__office {
+	display: flex;
+	align-items: baseline;
+	justify-content: center;
+	font-size: 18px;
+	color: $MainSource-900;
+	margin-left: 5px;
 }
 
 .main-menu__active .main-menu__languages {
@@ -761,6 +782,13 @@ footer {
 
 .telephone {
 	color: #000000
+}
+
+//-----------------------------------------//
+
+.vacancy {
+	background-color: $background-color;
+	position: sticky;
 }
 
 @import "MediaStyle.scss";
