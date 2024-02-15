@@ -16,4 +16,13 @@
 	.structure__content-email:hover::before {
 		width: 100%;
 	}
+
+	.vacancy__button:hover {
+		background-color: $MainSource-600;
+	}
+
+	.footer__list li:hover {
+		font-size: 18px;
+		color: $background-color;
+	}
 }

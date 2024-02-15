@@ -24,7 +24,7 @@
 		<meta name="msapplication-config" content="./Source/Img/Favicon/browserconfig.xml" />
 		<meta name="msapplication-TileColor" content="#ffffff" />
 		<meta name="theme-color" content="#ffffff" />
-		<title>ЦРИ</title>
+		<title>Центр Развития Информатизации</title>
 	</head>
 
 	<body>
@@ -67,10 +67,11 @@
 										<li class="main-menu__item"><a href="#about-us_link">О нас</a></li>
 										<li class="main-menu__item"><a href="#structure_link">Структура</a></li>
 										<li class="main-menu__item"><a href="#vacancy_link">Вакансии</a></li>
+										<li class="main-menu__item"><a href="#footer_link">Вопросы</a></li>
 									</ul>
 								</div>
 								<div class="main-menu__footer">
-									<p>CRI.com © 2024-<samp id="currentYear"></samp>.&nbsp</p>
+									<p>CRI.com © 2024-<samp class="current-year"></samp>.&nbsp</p>
 									<p>Все права защищены</p>
 								</div>
 							</div>
@@ -116,7 +117,7 @@
 										</p>
 									</div>
 									<div class="card__information">
-										<button>Подробние...</button>
+										<button>Подробнее ...</button>
 										<span>1/08/2023</span>
 									</div>
 								</div>
@@ -152,7 +153,7 @@
 										</p>
 									</div>
 									<div class="card__information">
-										<button>Подробние...</button>
+										<button>Подробнее ...</button>
 										<span>1/08/2023</span>
 									</div>
 								</div>
@@ -177,7 +178,7 @@
 										</p>
 									</div>
 									<div class="card__information">
-										<button>Подробние...</button>
+										<button>Подробнее ...</button>
 										<span>1/08/2023</span>
 									</div>
 								</div>
@@ -202,7 +203,7 @@
 										</p>
 									</div>
 									<div class="card__information">
-										<button>Подробние...</button>
+										<button>Подробнее ...</button>
 										<span>1/08/2023</span>
 									</div>
 								</div>
@@ -338,25 +339,175 @@
 			</section>
 
 			<section class="vacancy" id="vacancy_link">
-				<div class="main-wrapper">
-					<div class="">
-						<h2><span>Вакансии</span></h2>
+				<div class="vacancy__container main-wrapper">
+					<div class="vacancy__header">
+						<h2 class="vacancy__title"><span>Вакансии</span></h2>
 					</div>
-					<div class="">
-						<div class="">Лучшее предложение</div>
-						<div class=""></div>
-						<div class=""></div>
+					<div class="vacancy__content">
+						<div class="vacancy__best-offer">Лучшее предложение пердложения за последние время</div>
+						<div class="vacancy__placeholder">
+							<a href="" class="vacancy__placeholder-blog">
+								<div class="vacancy__info">
+									<h3>Frontend-разработчик</h3>
+									<samp>200 000 - 300 000&#8376;</samp>
+								</div>
+								<div class="vacancy__details">
+									<p>OOO CRI</p>
+									<samp>Павлодар</samp>
+								</div>
+							</a>
+							<div class="vacancy__actions">
+								<div class="share-icon">
+									<div
+										class="ya-share2"
+										data-curtain
+										data-size="s"
+										data-shape="round"
+										data-limit="0"
+										data-more-button-type="short"
+										data-services="messenger,vkontakte,telegram,twitter,whatsapp"></div>
+								</div>
+								<div class="vacancy__stats">
+									<i class="fa-regular fa-eye"></i>
+									<samp>0</samp>
+								</div>
+							</div>
+						</div>
+
+						<div class="vacancy__placeholder">
+							<a href="" class="vacancy__placeholder-blog">
+								<div class="vacancy__info">
+									<h3>Frontend-разработчик</h3>
+									<samp>200 000 - 300 000&#8376;</samp>
+								</div>
+								<div class="vacancy__details">
+									<p>OOO CRI</p>
+									<samp>Павлодар</samp>
+								</div>
+							</a>
+							<div class="vacancy__actions">
+								<div class="share-icon">
+									<div
+										class="ya-share2"
+										data-curtain
+										data-size="s"
+										data-shape="round"
+										data-limit="0"
+										data-more-button-type="short"
+										data-services="messenger,vkontakte,telegram,twitter,whatsapp"></div>
+								</div>
+								<div class="vacancy__stats">
+									<i class="fa-regular fa-eye"></i>
+									<samp>0</samp>
+								</div>
+							</div>
+						</div>
+
+						<div class="vacancy__placeholder">
+							<a href="" class="vacancy__placeholder-blog">
+								<div class="vacancy__info">
+									<h3>Frontend-разработчик</h3>
+									<samp>200 000 - 300 000&#8376;</samp>
+								</div>
+								<div class="vacancy__details">
+									<p>OOO CRI</p>
+									<samp>Павлодар</samp>
+								</div>
+							</a>
+							<div class="vacancy__actions">
+								<div class="share-icon">
+									<div
+										class="ya-share2"
+										data-curtain
+										data-size="s"
+										data-shape="round"
+										data-limit="0"
+										data-more-button-type="short"
+										data-services="messenger,vkontakte,telegram,twitter,whatsapp"></div>
+								</div>
+								<div class="vacancy__stats">
+									<i class="fa-regular fa-eye"></i>
+									<samp>0</samp>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class=""><button>Все вакансии</button></div>
+					<button class="vacancy__button"><a href="#">Все вакансии</a></button>
 				</div>
 			</section>
 		</main>
 
-		<!-- <footer></footer> -->
+		<footer class="footer" id="footer_link">
+			<div class="footer__container main-wrapper">
+				<div class="footer__container-shell">
+					<div class="footer__container-information">
+						<ul class="footer__list">
+							<li><h4>Проэкты</h4></li>
+							<li>Проэкт 1</li>
+							<li>Проэкт 2</li>
+							<li>Проэкт 3</li>
+						</ul>
+						<ul class="footer__list">
+							<li><h4>Услуги</h4></li>
+							<li>Услуга 1</li>
+							<li>Услуга 2</li>
+							<li>Услуга 3</li>
+						</ul>
+						<ul class="footer__list">
+							<li><h4>Вопросы</h4></li>
+							<li>Техподдержка</li>
+						</ul>
+					</div>
+
+					<div style="position: relative; overflow: hidden" class="footer__container-map" id="map">
+						<a
+							href="https://yandex.ru/maps?utm_medium=mapframe&utm_source=maps"
+							style="color: #eee; font-size: 12px; position: absolute; top: 0px"
+							>Яндекс Карты</a
+						><a
+							href="https://yandex.ru/maps/190/pavlodar/house/Y08YfwNkQEAEQFtofX54cnVrbQ==/?ll=76.945409%2C52.293884&utm_medium=mapframe&utm_source=maps&z=18.13"
+							style="color: #eee; font-size: 12px; position: absolute; top: 14px"
+							>Улица Генерала Дюсенова, 9 — Яндекс Карты</a
+						><iframe
+							src="https://yandex.ru/map-widget/v1/?ll=76.945409%2C52.293884&mode=whatshere&whatshere%5Bpoint%5D=76.944932%2C52.294221&whatshere%5Bzoom%5D=17&z=18.13"
+							width="560"
+							height="400"
+							frameborder="1"
+							allowfullscreen="true"
+							style="position: relative"></iframe>
+					</div>
+				</div>
+
+				<div class="footer__links">
+					<ul class="footer__links-container">
+						<li>
+							<a href=""><i class="fa-brands fa-facebook"></i></a>
+						</li>
+						<li>
+							<a href=""><i class="fa-brands fa-instagram"></i></a>
+						</li>
+						<li>
+							<a href=""><i class="fa-brands fa-tiktok"></i></a>
+						</li>
+						<li>
+							<a href=""><i class="fa-brands fa-youtube"></i></a>
+						</li>
+						<li>
+							<a href=""><i class="fa-brands fa-x-twitter"></i></a>
+						</li>
+					</ul>
+					<div class="footer__warning">
+						<p>CRI.com © 2024-<samp class="current-year"></samp>.&nbsp</p>
+						<p>Все права защищены</p>
+					</div>
+				</div>
+			</div>
+		</footer>
 	</body>
 
 	<script src="./JS/Main-dist.js"></script>
-
 	<!-- Иконки -->
 	<script src="https://kit.fontawesome.com/0032cb8147.js" crossorigin="anonymous"></script>
+	<!-- Шаринг Яндекса -->
+	<script src="https://yastatic.net/share2/share.js"></script>
 </html>
