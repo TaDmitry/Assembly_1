@@ -1,7 +1,3 @@
-@import "Variables.scss";
-
-@import "Zeroing-out.scss";
-
 h1,
 h2,
 h3,
@@ -108,7 +104,7 @@ footer {
 }
 
 .images-parallax__background {
-	background: url("../Source/Img/main-board__background.jpg") top / cover no-repeat;
+	background: url("../img/main-board__background.jpg") top / cover no-repeat;
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -409,8 +405,11 @@ footer {
 	align-items: baseline;
 	justify-content: center;
 	font-size: 18px;
-	color: $MainSource-900;
 	margin-left: 5px;
+
+	a {
+		color: $MainSource-900;
+	}
 }
 
 .main-menu__active .main-menu__languages {
@@ -580,7 +579,7 @@ footer {
 
 .wrapper__about-us {
 	background-color: #FDFEFD;
-	position: sticky;
+	position: relative;
 }
 
 .wrapper__about-us>.main-wrapper {
@@ -641,7 +640,7 @@ footer {
 
 .structure {
 	background-color: $background-color;
-	position: sticky;
+	position: relative;
 }
 
 .structure__wrapper-flex {
@@ -822,7 +821,7 @@ footer {
 	display: block;
 	width: 95%;
 	margin: 5px auto 3% auto;
-	padding: 1% 2%;
+	padding: 2% 3%;
 	box-shadow: 4px 4px 18px 0px #cccccc;
 	border-radius: 5px
 }
@@ -869,8 +868,8 @@ footer {
 //-----------------------------------------//
 
 footer {
-	position: sticky;
 	background-color: #272432;
+	position: relative;
 }
 
 .footer__container-shell {
@@ -950,7 +949,3 @@ footer {
 		font-weight: 600;
 	}
 }
-
-@import "MediaAnimation.scss";
-
-@import "Media.scss";

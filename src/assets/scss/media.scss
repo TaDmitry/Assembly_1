@@ -39,7 +39,6 @@
 	}
 }
 
-
 @media (max-width: 780px) {
 	.navigation-area:before {
 		height: 100px;
@@ -131,10 +130,8 @@
 		font-size: clamp(24px, 22vw, 160px);
 	}
 
-	.structure__content-block-information {
-		h3 {
-			font-size: 22px;
-		}
+	.structure__content-block-information h3 {
+		font-size: 22px;
 	}
 }
 
