@@ -1,9 +1,5 @@
-@import "./variables.scss";
-
-@import "./zeroing-out.scss";
+@import "./_variables.scss";
 
 @import "./style.scss";
 
-@import "./mediaAnimation.scss";
-
-@import "./media.scss";
+@import "./components/_buttons.scss";

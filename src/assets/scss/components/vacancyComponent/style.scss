@@ -1,0 +1,84 @@
+.vacancy {
+	background-color: var(--bc-m);
+	position: relative;
+}
+
+.vacancy__container {
+	display: flex;
+	flex-direction: column;
+}
+
+.vacancy__best-offer {
+	width: 98%;
+	color: var(--tx);
+	margin: 0 auto 20px auto;
+	font-weight: 600;
+	text-align: center;
+	font-size: 20px;
+	font-family: "TT Lakes Neue Condensed";
+	padding: 10px 5px;
+	background-color: var(--bc-Div);
+	box-shadow: 4px 4px 18px 0px var(--bc-Div-shadow);
+	border-radius: 10px;
+}
+
+.vacancy__placeholder {
+	display: block;
+	width: 95%;
+	margin: 5px auto 3% auto;
+	background-color: var(--bc-Div);
+	box-shadow: 4px 4px 18px 0px var(--bc-Div-shadow);
+	border-radius: 10px;
+}
+
+.vacancy__placeholder-blog {
+	display: block;
+	padding: 15px;
+	color: var(--tx);
+}
+
+.vacancy__info {
+	margin: 0 0 16px;
+
+	samp {
+		font-weight: 600;
+	}
+}
+
+.vacancy__details {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+}
+
+.vacancy__information samp {
+	font-weight: 600;
+}
+
+.vacancy__actions {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 10px 0 0;
+}
+
+.vacancy__actions-container {
+	display: flex;
+	align-items: baseline;
+
+	i {
+		margin-right: 5px;
+	}
+}
+
+.vacancy__button {
+	font-size: 20px;
+	font-weight: 600;
+	margin: 30px auto 10px;
+}
+
+@media (max-width: 880px) {
+	.vacancy__placeholder-blog {
+		padding: 12px;
+	}
+}

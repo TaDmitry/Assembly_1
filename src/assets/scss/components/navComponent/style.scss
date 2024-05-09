@@ -1,0 +1,473 @@
+.navigation-area {
+	width: 100%;
+	height: 100%;
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	background-color: var(--bc-technical);
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 150px;
+		transform: translate(0px, -99%);
+		background: linear-gradient(180deg, var(--transparent), var(--bc-technical));
+		pointer-events: none;
+	}
+}
+
+.navigation-area__wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 60px;
+		background-color: var(--bc-technical);
+		box-shadow: 0px 6px 20px 0px var(--bc-technical);
+	}
+}
+
+.main-wrapper {
+	margin: 0 auto;
+	padding: 0 2%;
+	max-width: 1280px;
+}
+
+.navigation-area__logo {
+	display: flex;
+	align-items: center;
+	margin: 5px 0;
+	z-index: 1;
+}
+
+.logo {
+	width: 50px;
+	height: 50px;
+
+	img {
+		width: inherit;
+		height: inherit;
+	}
+}
+
+.navigation-area__brand {
+	font-size: 24px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	color: var(--tx-n);
+	margin: 0px 15px 0 10px;
+	font-family: "TT Lakes Neue Condensed";
+}
+
+.navigation-area__menu {
+	display: flex;
+	align-items: center;
+}
+
+.main-menu {
+	margin-left: auto;
+	display: flex;
+	align-items: center;
+}
+
+.main-menu__burgers {
+	display: none;
+	cursor: pointer;
+	height: 28px;
+	width: 28px;
+	margin: 0 15px 0 0;
+	overflow: visible;
+	position: relative;
+	z-index: 2;
+
+	span {
+		background: var(--tx-n);
+		display: block;
+		height: 3px;
+		opacity: 1;
+		position: absolute;
+		transition: 0.3s ease-in-out;
+		right: 0px;
+		top: 13px;
+		width: 27px;
+		border-radius: 10px;
+
+		&:before {
+			content: "";
+			background: var(--tx-n);
+			display: block;
+			height: 3px;
+			opacity: 1;
+			position: absolute;
+			transition: 0.3s ease-in-out;
+			left: 11px;
+			top: -10px;
+			width: 16px;
+			border-radius: 10px;
+		}
+
+		&:after {
+			content: "";
+			background: var(--tx-n);
+			display: block;
+			height: 3px;
+			opacity: 1;
+			position: absolute;
+			transition: 0.3s ease-in-out;
+			left: 7px;
+			top: 10px;
+			width: 20px;
+			border-radius: 10px;
+		}
+	}
+}
+
+.main-menu__burgers.close {
+	z-index: 0;
+
+	& span {
+		transform: rotate(-45deg);
+		top: 13px;
+		width: 27px;
+
+		&:before {
+			left: 0px;
+			top: 0px;
+			transform: rotate(90deg);
+			width: 27px;
+		}
+
+		&:after {
+			opacity: 0;
+			width: 0;
+		}
+	}
+}
+
+.main-menu__shell {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.main-menu__container.overlay {
+	position: fixed;
+	top: 60px;
+	left: 0;
+	z-index: 10;
+	opacity: 1;
+	width: 100%;
+	height: calc(100vh - 60px);
+	transition: all 0.2s ease-in-out;
+	visibility: visible;
+	backdrop-filter: blur(6px);
+
+	& .main-menu__shell {
+		width: 50%;
+		margin: 10% auto 0;
+		background-color: var(--bc-m);
+		border-radius: 10px;
+		box-shadow: 0px 0px 20px 2px var(--bc-Div-shadow);
+	}
+
+	& .main-menu__list {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	& .main-menu__item {
+		display: flex;
+		justify-content: center;
+		padding: 6px;
+		margin: 0;
+		width: 100%;
+		color: var(--tx);
+
+		&:first-child {
+			padding: 12px 6px 12px 6px;
+			border-radius: 10px 10px 0 0;
+			background-color: var(--color-accent-900);
+			box-shadow: inset 0px 0px 8px 0px var(--bc-m);
+		}
+
+		&:last-child {
+			padding-bottom: 12px;
+		}
+	}
+
+	& .main-menu__item>a {
+		font-size: 24px;
+	}
+
+	@media (hover: hover) {
+		.main-menu__item:hover::before {
+			opacity: 0;
+		}
+	}
+}
+
+.overflow-hidden {
+	overflow: hidden;
+}
+
+.main-menu__item {
+	display: inline-block;
+	letter-spacing: 1px;
+	color: var(--tx-n);
+	margin-right: 30px;
+	cursor: pointer;
+	position: relative;
+
+	&>a {
+		color: inherit;
+		font-size: 16px;
+		font-weight: 600;
+		font-family: "TT Lakes Neue Condensed";
+	}
+
+	&::before {
+		content: "";
+		width: 10%;
+		height: 2px;
+		background: var(--accent-900);
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		top: 25px;
+		opacity: 0;
+		transition-duration: 0.3s;
+		border-radius: 10px;
+	}
+}
+
+.main-menu__controls {
+	display: flex;
+	align-items: center;
+}
+
+.main-menu__active {
+	position: relative;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: baseline;
+
+	span {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--accent-900);
+		font-size: 17px;
+		font-weight: 600;
+		font-family: "TT Lakes Neue Condensed";
+		margin: 0 20px 0 15px;
+		width: 30px;
+		height: 30px;
+		border-radius: 100%;
+		box-shadow: inset 0 8px 60px var(--black-01), inset 0 8px 8px var(--black-01), inset 0 -4px 4px var(--black-01);
+
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			left: 0px;
+			width: 2px;
+			height: 100%;
+			background-color: var(--bc-n-bur);
+			border-radius: 10px;
+		}
+	}
+}
+
+.main-menu__office {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	box-shadow: inset 0 8px 60px var(--black-01), inset 0 8px 8px var(--black-01), inset 0 -4px 4px var(--black-01);
+	font-size: 20px;
+	z-index: 1;
+
+	a {
+		color: var(--accent-900);
+	}
+}
+
+.main-menu__active .main-menu__languages {
+	display: none;
+	position: absolute;
+	top: -10px;
+	left: 8px;
+	background-color: var(--bc-technical);
+	box-shadow: 0 8px 16px var(--black-05);
+	z-index: 10;
+	border-radius: 10px;
+}
+
+.main-menu__languages {
+	a {
+		font-size: 17px;
+		color: var(--tx-n);
+		padding: 12px;
+		text-decoration: none;
+		display: block;
+		transition: background-color 0.3s;
+	}
+}
+
+.main-menu__topic {
+	margin: 0 0 0 20px;
+}
+
+.menu-topic__active {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	cursor: pointer;
+}
+
+.menu-topic__checkbox {
+	position: absolute;
+	width: inherit;
+	height: inherit;
+	opacity: 0;
+	z-index: 10;
+	cursor: pointer;
+}
+
+.sunny {
+	position: absolute;
+	font-size: 1.5em;
+	color: var(--accent-900);
+	filter: drop-shadow(0 0 2px var(--black-05));
+	transform: scale(0);
+	transition: 1s ease;
+	z-index: 2;
+}
+
+input:checked~.sunny {
+	transition-delay: .8s;
+	transform: scale(1) rotate(360deg);
+}
+
+.moon {
+	font-size: 1.5em;
+	color: var(--accent-900);
+	filter: drop-shadow(0 0 2px var(--black-05));
+	transition: 1s ease;
+	transition-delay: .8s;
+	z-index: 2;
+}
+
+input:checked~.moon {
+	transition-delay: 0s;
+	transform: rotate(360deg) scale(0);
+}
+
+.menu-topic__toggle {
+	position: absolute;
+	display: block;
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	box-shadow: inset 0 8px 60px var(--black-01), inset 0 8px 8px var(--black-01), inset 0 -4px 4px var(--black-01);
+	z-index: 0;
+	transition: 1s;
+}
+
+.menu-topic__animation {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: var(--bc-m);
+	z-index: -1;
+	clip-path: circle(0% at 100% 0%);
+	transition: 1.0s ease-out;
+}
+
+.animate {
+	clip-path: circle(200% at 100% 0%);
+}
+
+@media (hover: hover) {
+	.main-menu__item:hover::before {
+		opacity: 1;
+		width: 100%;
+	}
+
+	.main-menu__languages a:hover {
+		background-color: var(--accent-900);
+		border-radius: 0 0 10px 10px;
+		color: var(--tx-n);
+	}
+}
+
+@media (max-width: 780px) {
+	.navigation-area:before {
+		height: 100px;
+	}
+}
+
+@media (max-width: 768px) {
+	.main-menu__burgers {
+		display: block;
+	}
+
+	.main-menu__container {
+		width: 0;
+		height: 100vh;
+		position: fixed;
+		top: 0;
+		left: 0;
+		visibility: hidden;
+		opacity: 0;
+	}
+}
+
+@media (max-width: 720px) {
+	.main-menu {
+		margin: 10px 0;
+	}
+}
+
+@media (max-width: 550px) {
+	.main-menu__container.overlay .main-menu__shell {
+		width: 70%;
+	}
+}
+
+@media (max-width: 425px) {
+	.navigation-area:before {
+		height: 50px;
+	}
+}
+
+@media (max-width: 375px) {
+	.navigation-area__brand {
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 320px) {
+	.navigation-area__brand {
+		display: none;
+	}
+}

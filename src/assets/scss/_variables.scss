@@ -1,0 +1,115 @@
+:root {
+	// Default Light Theme Colors 
+	--color-000: rgba(0, 0, 0, 0);
+	--color-white: #ffffff;
+	--color-white-080: #ffffff8a;
+	--color-white-200: #d8d6d6;
+	--color-white-300: #cccccc;
+	--color-white-500: #9f9f9f;
+
+	// Default Dark Theme Colors 
+	--color-black-01: rgba(0, 0, 0, 0.1);
+	--color-black-02: rgba(0, 0, 0, 0.2);
+	--color-black-05: rgba(0, 0, 0, 0.5);
+	--color-black: #000000;
+	--color-black-100: #0c0c0c;
+	--color-black-180: #181818;
+	--color-black-220: #222222;
+	--color-black-270: #272432;
+	--color-black-360: #363636;
+	--color-black-440: #444444;
+	--color-black-660: #666;
+
+	// Default Accent Colors 
+	--color-accent-006: #c1ddc215;
+	--color-accent-008: #c1ddc250;
+	--color-accent-010: #00e10422;
+	--color-accent-100: #c1ddc2;
+	--color-accent-400: #80b982;
+	--color-accent-600: #429f46;
+	--color-accent-900: #2e7c32;
+
+	// Default Social Media Colors 
+	--color-facebook: #3b5998;
+	--color-instagram-1: #f9ce34;
+	--color-instagram-2: #ee2a7b;
+	--color-instagram-3: #6228d7;
+	--color-tiktok: #000000;
+	--color-youtube: #ff0000;
+	--color-twitter: #000000;
+}
+
+:root {
+	--transparent: var(--color-000);
+
+
+	--black: var(--color-black);
+	--black-01: var(--color-black-01);
+	--black-02: var(--color-black-02);
+	--black-05: var(--color-black-05);
+
+	--white: var(--color-white);
+	--white-08: var(--color-white-080);
+
+
+	--bc-Div: var(--color-white);
+	--bc-Div-shadow: var(--color-white-300);
+	--bc-technical: var(--color-black-270);
+	--bc-n-bur: var(--color-white);
+	--bc-m: var(--color-white);
+	--bc-st-nav: var(--color-accent-008);
+	--bc-separation: var(--color-white-300);
+
+	--moon: var(--color-white);
+
+	--tx: var(--color-black);
+	--tx-h: var(--color-white);
+	--tx-n: var(--color-white);
+	--tx-news-s: var(--color-black-660);
+	--tx-f: var(--color-white);
+	--tx-f-li: var(--color-black-660);
+	--tx-f-networks: var(--color-white);
+	--tx-but: var(--color-black);
+
+	--shadow-h: var(--color-black);
+	--shadow-t-h: var(--color-white);
+	--accent-006: var(--color-accent-006);
+	--accent-008: var(--color-accent-008);
+	--accent-010: var(--color-accent-010);
+	--accent-100: var(--color-accent-100);
+	--accent-400: var(--color-accent-400);
+	--accent-600: var(--color-accent-600);
+	--accent-900: var(--color-accent-900);
+
+	--instagram: linear-gradient(120deg,
+			var(--color-instagram-1),
+			var(--color-instagram-2),
+			var(--color-instagram-3));
+}
+
+.darkstyle {
+	--black: var(--color-white);
+	--white: var(--color-black);
+
+	--black-01: var(--color-black-01);
+	--black-02: var(--color-black-02);
+	--black-05: var(--color-black-05);
+
+	--bc-Div: var(--color-black-180);
+	--bc-Div-shadow: var(--color-black-180);
+	--bc-technical: var(--color-black-180);
+	--bc-n-bur: var(--color-white);
+	--bc-m: var(--color-black-100);
+	--bc-st-nav: var(--color-accent-006);
+	--bc-separation: var(--color-white-300);
+
+	--tx: var(--color-white);
+	--tx-h: var(--color-white);
+	--tx-n: var(--color-white);
+	--tx-news-s: var(--color-black-660);
+	--tx-f: var(--color-white);
+	--tx-f-li: var(--color-black-660);
+	--tx-f-networks: var(--color-white);
+
+	--shadow-h: var(--color-white);
+}
