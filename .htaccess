@@ -1,3 +1,4 @@
+<!-- Этот код — это конфигурация для веб-сервера Apache -->
 <ifModule mod_rewrite.c>
 	RewriteEngine On
 RewriteBase /
